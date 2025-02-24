@@ -25,4 +25,124 @@ namespace Homework_4._2
          Console.ReadKey();
       }
    }
+
+   //int main()
+   //{
+   //   setlocale(LC_ALL, "Russian");
+
+   //   int n = razmerrowvect();
+   //   int m = razmercolumnvect();
+   //   bool fl = false;
+
+   //   double** a = new double*[n];
+
+   //   FILE* fp_a = fopen("a.txt", "r");
+   //   if (fp_a == nullptr)
+   //   {
+   //      printf("Ошибка при открытии файла для чтенияn");
+   //      return 1;
+   //   }
+
+   //   vvod_vect(a, n, m, fp_a);
+   //   fclose(fp_a);
+
+   //   double* b;
+   //   find_max(b, a, n, m, fl);
+
+   //   FILE* fp_finish = fopen("finish.txt", "w");
+   //   if (fp_finish == nullptr)
+   //   {
+   //      printf("Ошибка при открытии файла для записиn");
+   //      delete[] b;
+   //      return 1;
+   //   }
+
+   //   vivod_vector(b, n, fp_finish);
+   //   fclose(fp_finish);
+
+   //   for (int i = 0; i < n; i++)
+   //   {
+   //      delete[] a[i];
+   //   }
+   //   delete[] a;
+   //   delete[] b;
+
+   //   return 0;
+   //}
+
+   //int razmerrowvect()
+   //{
+   //   int n;
+   //   do
+   //   {
+   //      printf("%s", "Введите количество строк массива А\n");
+   //      scanf("%d", &n);
+   //      if (n <= 0 || n >= 20)
+   //      {
+   //         printf("%s", "Введено не верное значение\n");
+   //      }
+   //   } while (n <= 0 || n >= 20);
+
+   //   return n;
+   //}
+
+   //int razmercolumnvect()
+   //{
+   //   int m;
+   //   do
+   //   {
+   //      printf("%s", "Введите количество столбцов массива А\n");
+   //      scanf("%d", &m);
+   //      if (m <= 0 || m >= 20)
+   //      {
+   //         printf("%s", "Введено не верное значение\n");
+   //      }
+   //   } while (m <= 0 || m >= 20);
+   //   return m;
+   //}
+
+   //void vvod_vect(double**& x, int n, int m, FILE* f)
+   //{
+   //   for (int i = 0; i < n; i++)
+   //   {
+   //      x[i] = new double[m];
+   //      for (int j = 0; j < m; j++)
+   //      {
+   //         fscanf(f, "%lf", &x[i][j]);
+   //         printf("%lf ", x[i][j]);
+   //      }
+   //      printf("%s", "\n");
+   //   }
+   //}
+
+   //void find_max(double*& y, double** a, int n, int m, bool fl)
+   //{
+   //   fl = false;
+   //   y = new double[n];
+   //   for (int i = 0; i < n; i++)
+   //   {
+   //      double max = a[i][0];
+   //      for (int j = 1; j < m; j++)
+   //      {
+   //         if (a[i][j] > max)
+   //         {
+   //            max = a[i][j];
+   //            fl = true;
+   //         }
+   //      }
+   //      if (fl == true)
+   //      {
+   //         y[i] = max;
+   //      }
+   //   }
+   //}
+
+   //void vivod_vector(double* x, int n, FILE* f)
+   //{
+   //   for (int i = 0; i < n; i++)
+   //   {
+   //      fprintf(f, "%lf ", x[i]);
+   //   }
+   //   printf("%s", "\n");
+   //}
 }
