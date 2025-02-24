@@ -15,7 +15,12 @@ namespace Homework_4._2
    {
       static void Main(string[] args)
       {
+         // Переводит (,) в (.)
+         //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
+
+
          Console.WriteLine("Hello World!");
+         Console.ReadKey();
       }
    }
 }
