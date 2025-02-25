@@ -20,9 +20,23 @@ namespace Homework_4._2
 
          // LibraryForTwoDimensionalArray
 
+         int n = Razmerrow();
+         int m = Razmercolumn();
+         bool fl = false;
+
 
          Console.WriteLine("Hello World!");
          Console.ReadKey();
+      }
+
+      private static int Razmercolumn()
+      {
+         throw new NotImplementedException();
+      }
+
+      private static int Razmerrow()
+      {
+         throw new NotImplementedException();
       }
    }
 
