@@ -24,20 +24,47 @@ namespace Homework_4._2
          int m = Razmercolumn();
          bool fl = false;
 
+         double[,] a = new double[n, m];
 
-         Console.WriteLine("Hello World!");
+
          Console.ReadKey();
-      }
-
-      private static int Razmercolumn()
-      {
-         throw new NotImplementedException();
       }
 
       private static int Razmerrow()
       {
-         throw new NotImplementedException();
+         int n;
+         do
+         {
+            Console.WriteLine("Введите количество строк массива А");
+            int.TryParse(Console.ReadLine(), out n);
+            //n = Convert.ToInt32(Console.ReadLine());
+            if (n <= 0 || n >= 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (n <= 0 || n >= 20);
+
+         return n;
       }
+
+      private static int Razmercolumn()
+      {
+         int m;
+         do
+         {
+            Console.WriteLine("Введите количество столбцов массива А");
+            int.TryParse(Console.ReadLine(), out m);
+            //m = Convert.ToInt32(Console.ReadLine());
+            if (m <= 0 || m >= 20)
+            {
+               Console.WriteLine("Введено не верное значение");
+            }
+         } while (m <= 0 || m >= 20);
+
+         return m;
+      }
+
+
    }
 
    //int main()
