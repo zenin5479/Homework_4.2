@@ -26,14 +26,12 @@ namespace Homework_4._2
 
          double[,] a = new double[n, m];
 
-
          FILE* fp_a = fopen("a.txt", "r");
          if (fp_a == nullptr)
          {
             printf("Ошибка при открытии файла для чтенияn");
             return 1;
          }
-
 
          Console.ReadKey();
       }
