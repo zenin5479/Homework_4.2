@@ -75,8 +75,6 @@ namespace Homework_4._2
 
          return m;
       }
-
-
    }
 
    //int main()
