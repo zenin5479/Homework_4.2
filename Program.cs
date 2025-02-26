@@ -26,18 +26,22 @@ namespace Homework_4._2
          bool fl = false;
 
          double[,] a = new double[n, m];
-         
-         string filePath = AppContext.BaseDirectory;
+
+
+
+         string path = AppContext.BaseDirectory;
+         string filePath = path+ "a.txt";
+
          Console.WriteLine(filePath);
 
          FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read);
 
-         FILE* fp_a = fopen("a.txt", "r");
-         if (fp_a == nullptr)
-         {
-            printf("Ошибка при открытии файла для чтенияn");
-            return 1;
-         }
+         //FILE* fp_a = fopen("a.txt", "r");
+         //if (fp_a == nullptr)
+         //{
+         //   printf("Ошибка при открытии файла для чтенияn");
+         //   return 1;
+         //}
 
          Console.ReadKey();
       }
