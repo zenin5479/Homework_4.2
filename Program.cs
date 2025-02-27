@@ -83,7 +83,6 @@ namespace Homework_4._2
             {
                
                //fscanf(f, "%lf", a[i, j]);
-
                Console.Write("{0:f} ", a[i, j]);
             }
             Console.WriteLine();
