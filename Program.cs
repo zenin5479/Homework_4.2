@@ -9,6 +9,7 @@ using System.IO;
 // Для двумерного массива A из m строк и n столбцов сформировать массив B из m элементов
 // Каждый элемент Bi получает значение максимального элемента i–й строки массива A
 // Для поиска максимального элемента в произвольной строке двумерного массива использовать подпрограмму
+// LibraryForTwoDimensionalArray
 
 namespace Homework_4._2
 {
@@ -19,29 +20,27 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         // LibraryForTwoDimensionalArray
-
          int n = Razmerrow();
          int m = Razmercolumn();
          bool fl = false;
 
          double[,] a = new double[n, m];
 
-
-
          string path = AppContext.BaseDirectory;
-         string filePath = path+ "a.txt";
-
-
+         string filePath = path + "a.txt";
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
          if (fpA == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
+         vvod_vect(a, n, m, fpA);
+
 
          Console.ReadKey();
       }
+
+
 
       private static int Razmerrow()
       {
@@ -76,6 +75,20 @@ namespace Homework_4._2
 
          return m;
       }
+      private static void vvod_vect(double[,] doubles, int i, int i1, FileStream fpA)
+      {
+         for (int i = 0; i < n; i++)
+         {
+            x[i] = new double[m];
+            for (int j = 0; j < m; j++)
+            {
+               fscanf(f, "%lf", &x[i][j]);
+               printf("%lf ", x[i][j]);
+            }
+            printf("%s", "\n");
+         }
+      }
+
    }
 
    //int main()
