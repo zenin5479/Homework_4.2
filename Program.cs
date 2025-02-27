@@ -82,7 +82,7 @@ namespace Homework_4._2
             for (int j = 0; j < m; j++)
             {
                
-               fscanf(f, "%lf", a[i, j]);
+               //fscanf(f, "%lf", a[i, j]);
 
                Console.Write("{0:f} ", a[i, j]);
             }
