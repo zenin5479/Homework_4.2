@@ -75,19 +75,20 @@ namespace Homework_4._2
 
          return m;
       }
-      private static void vvod_vect(double[,] x, int n, int m, FileStream fpA)
+      private static void vvod_vect(double[,] a, int n, int m, FileStream fpA)
       {
          for (int i = 0; i < n; i++)
          {
             for (int j = 0; j < m; j++)
             {
-               fscanf(f, "%lf", &x[i][j]);
-               printf("%lf ", x[i][j]);
+               
+               fscanf(f, "%lf", a[i, j]);
+
+               Console.Write("{0:f} ", a[i, j]);
             }
-            printf("%s", "\n");
+            Console.WriteLine();
          }
       }
-
    }
 
    //int main()
