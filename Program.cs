@@ -75,7 +75,7 @@ namespace Homework_4._2
 
          return m;
       }
-      private static void vvod_vect(double[,] doubles, int i, int i1, FileStream fpA)
+      private static void vvod_vect(double[,] a, int n, int m, FileStream fpA)
       {
          for (int i = 0; i < n; i++)
          {
