@@ -32,16 +32,13 @@ namespace Homework_4._2
          string path = AppContext.BaseDirectory;
          string filePath = path+ "a.txt";
 
-         Console.WriteLine(filePath);
 
-         FileStream fs = File.Open(filePath, FileMode.Open, FileAccess.Read);
+         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
+         if (fpA == null)
+         {
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
 
-         //FILE* fp_a = fopen("a.txt", "r");
-         //if (fp_a == nullptr)
-         //{
-         //   printf("Ошибка при открытии файла для чтенияn");
-         //   return 1;
-         //}
 
          Console.ReadKey();
       }
