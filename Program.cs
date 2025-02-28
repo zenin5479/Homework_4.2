@@ -34,7 +34,7 @@ namespace Homework_4._2
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
-         vvod_vect(a, n, m, fpA);
+         VvodArray(a, n, m, fpA);
 
 
          Console.ReadKey();
@@ -75,7 +75,7 @@ namespace Homework_4._2
 
          return m;
       }
-      private static void vvod_vect(double[,] a, int n, int m, FileStream fpA)
+      private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
          for (int i = 0; i < n; i++)
          {
