@@ -40,7 +40,6 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-
       private static int Razmerrow()
       {
          int n;
