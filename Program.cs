@@ -75,11 +75,14 @@ namespace Homework_4._2
       }
       private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
+         //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
+         //1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
+
          for (int i = 0; i < n; i++)
          {
             for (int j = 0; j < m; j++)
             {
-               
+
                //fscanf(f, "%lf", a[i, j]);
                Console.Write("{0:f} ", a[i, j]);
             }
@@ -87,6 +90,8 @@ namespace Homework_4._2
          }
       }
    }
+
+
 
    //int main()
    //{
