@@ -134,37 +134,6 @@ namespace Homework_4._2
    //}
 
 
-   //int razmerrowvect()
-   //{
-   //   int n;
-   //   do
-   //   {
-   //      printf("%s", "Введите количество строк массива А\n");
-   //      scanf("%d", &n);
-   //      if (n <= 0 || n >= 20)
-   //      {
-   //         printf("%s", "Введено не верное значение\n");
-   //      }
-   //   } while (n <= 0 || n >= 20);
-
-   //   return n;
-   //}
-
-   //int razmercolumnvect()
-   //{
-   //   int m;
-   //   do
-   //   {
-   //      printf("%s", "Введите количество столбцов массива А\n");
-   //      scanf("%d", &m);
-   //      if (m <= 0 || m >= 20)
-   //      {
-   //         printf("%s", "Введено не верное значение\n");
-   //      }
-   //   } while (m <= 0 || m >= 20);
-   //   return m;
-   //}
-
    //void vvod_vect(double**& x, int n, int m, FILE* f)
    //{
    //   for (int i = 0; i < n; i++)
