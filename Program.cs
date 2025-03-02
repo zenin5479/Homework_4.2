@@ -36,7 +36,6 @@ namespace Homework_4._2
 
          VvodArray(a, n, m, fpA);
 
-
          Console.ReadKey();
       }
 
