@@ -92,7 +92,6 @@ namespace Homework_4._2
    }
 
 
-
    //int main()
    //{
    //   setlocale(LC_ALL, "Russian");
