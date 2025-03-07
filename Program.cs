@@ -34,7 +34,21 @@ namespace Homework_4._2
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
-         VvodArray(a, n, m, fpA);
+         //VvodArray(a, n, m, fpA);
+
+         // Cвязываем StreamReader c файловыйм потоком
+         StreamReader stream = new StreamReader(fpA);
+         for (int i = 0; i < n; i++)
+         {
+            // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки.
+            string singleLine = stream.ReadLine();
+            Console.WriteLine(singleLine);
+
+            //Console.WriteLine();
+         }
+         // Закрытие потока
+         stream.Close();
+
 
          Console.ReadKey();
       }
