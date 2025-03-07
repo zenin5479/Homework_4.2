@@ -52,24 +52,22 @@ namespace Homework_4._2
             stream.Close();
          }
 
-         // Создать новый список
+         // Создаем новый список
          List<string> lines = new List<string>();
-
-         // Используйте ключевое слово using- для удаления
+         // Используем ключевое слово using для удаления
          using (StreamReader reader = new StreamReader(filePath))
          {
-            // Используйте шаблон while not null в цикле while.
+            // Используем шаблон while not null в цикле while
             string line;
             while ((line = reader.ReadLine()) != null)
             {
-               // Вставьте сюда логику.
-               // ... Переменная "line" - это строка в файле.
-               // ... Добавьте его в наш список.
+               // Вставляем сюда логику
+               // Переменная "line" - это строка в файле
+               // Добавляем её в список
                lines.Add(line);
             }
          }
-
-         // Распечатайте все строки в списке.
+         // Распечатываем все строки в списке
          foreach (string value in lines)
          {
             Console.WriteLine(value);
