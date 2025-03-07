@@ -51,7 +51,6 @@ namespace Homework_4._2
             stream.Close();
          }
 
-
          Console.ReadKey();
       }
 
