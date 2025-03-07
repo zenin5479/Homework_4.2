@@ -37,17 +37,19 @@ namespace Homework_4._2
          //VvodArray(a, n, m, fpA);
 
          // Cвязываем StreamReader c файловыйм потоком
-         StreamReader stream = new StreamReader(fpA);
-         for (int i = 0; i < n; i++)
+         if (fpA != null)
          {
-            // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки.
-            string singleLine = stream.ReadLine();
-            Console.WriteLine(singleLine);
-
-            //Console.WriteLine();
+            StreamReader stream = new StreamReader(fpA);
+            for (int i = 0; i < n; i++)
+            {
+               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
+               string singleLine = stream.ReadLine();
+               Console.WriteLine(singleLine);
+               //Console.WriteLine();
+            }
+            // Закрытие потока
+            stream.Close();
          }
-         // Закрытие потока
-         stream.Close();
 
 
          Console.ReadKey();
