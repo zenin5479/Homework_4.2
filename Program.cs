@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 // Составить подпрограмму для решения первой подзадачи и использовать её при решении второй подзадачи
@@ -49,6 +50,29 @@ namespace Homework_4._2
             }
             // Закрытие потока
             stream.Close();
+         }
+
+         // Создать новый список
+         List<string> lines = new List<string>();
+
+         // Используйте ключевое слово using- для удаления
+         using (StreamReader reader = new StreamReader(filePath))
+         {
+            // Используйте шаблон while not null в цикле while.
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+               // Вставьте сюда логику.
+               // ... Переменная "line" - это строка в файле.
+               // ... Добавьте его в наш список.
+               lines.Add(line);
+            }
+         }
+
+         // Распечатайте все строки в списке.
+         foreach (string value in lines)
+         {
+            Console.WriteLine(value);
          }
 
          Console.ReadKey();
