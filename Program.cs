@@ -68,9 +68,8 @@ namespace Homework_4._2
             }
          }
          // Распечатываем все строки в списке
-         for (var i = lines.Count - 1; i >= 0; i--)
+         foreach (string value in lines)
          {
-            var value = lines[i];
             Console.WriteLine(value);
          }
 
