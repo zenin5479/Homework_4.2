@@ -46,8 +46,9 @@ namespace Homework_4._2
                // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
                string singleLine = stream.ReadLine();
                Console.WriteLine(singleLine);
-               //Console.WriteLine();
+
             }
+            Console.WriteLine();
             // Закрытие потока
             stream.Close();
          }
