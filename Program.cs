@@ -24,9 +24,7 @@ namespace Homework_4._2
          int n = Razmerrow();
          int m = Razmercolumn();
          bool fl = false;
-
          double[,] a = new double[n, m];
-
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
