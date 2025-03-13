@@ -109,6 +109,7 @@ namespace Homework_4._2
 
          return m;
       }
+
       private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
          //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
@@ -126,7 +127,6 @@ namespace Homework_4._2
          }
       }
    }
-
 
    //int main()
    //{
@@ -171,7 +171,6 @@ namespace Homework_4._2
 
    //   return 0;
    //}
-
 
    //void vvod_vect(double**& x, int n, int m, FILE* f)
    //{
