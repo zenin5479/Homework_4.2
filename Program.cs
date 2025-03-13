@@ -161,12 +161,6 @@ namespace Homework_4._2
 
    //   vivod_vector(b, n, fp_finish);
    //   fclose(fp_finish);
-
-   //   for (int i = 0; i < n; i++)
-   //   {
-   //      delete[] a[i];
-   //   }
-   //   delete[] a;
    //}
 
    //void vvod_vect(double**& x, int n, int m, FILE* f)
