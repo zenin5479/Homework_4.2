@@ -167,8 +167,6 @@ namespace Homework_4._2
    //      delete[] a[i];
    //   }
    //   delete[] a;
-   //   delete[] b;
-
    //}
 
    //void vvod_vect(double**& x, int n, int m, FILE* f)
