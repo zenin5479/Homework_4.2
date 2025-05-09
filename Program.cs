@@ -74,23 +74,6 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-      //private static int Razmerrow()
-      //{
-      //   int n;
-      //   do
-      //   {
-      //      Console.WriteLine("Введите количество строк массива А");
-      //      int.TryParse(Console.ReadLine(), out n);
-      //      //n = Convert.ToInt32(Console.ReadLine());
-      //      if (n <= 0 || n >= 20)
-      //      {
-      //         Console.WriteLine("Введено не верное значение");
-      //      }
-      //   } while (n <= 0 || n >= 20);
-
-      //   return n;
-      //}
-
       //private static int Razmercolumn()
       //{
       //   int m;
