@@ -74,22 +74,7 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-      //private static int Razmercolumn()
-      //{
-      //   int m;
-      //   do
-      //   {
-      //      Console.WriteLine("Введите количество столбцов массива А");
-      //      int.TryParse(Console.ReadLine(), out m);
-      //      //m = Convert.ToInt32(Console.ReadLine());
-      //      if (m <= 0 || m >= 20)
-      //      {
-      //         Console.WriteLine("Введено не верное значение");
-      //      }
-      //   } while (m <= 0 || m >= 20);
-
-      //   return m;
-      //}
+      
 
       private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
