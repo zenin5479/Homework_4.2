@@ -21,12 +21,10 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         int n = Razmerrow();
-         int m = Razmercolumn();
+         int n = TwoDimensionalArray.Razmerrow();
+         int m = TwoDimensionalArray.Razmercolumn();
          bool fl = false;
-
          double[,] a = new double[n, m];
-
          string path = AppContext.BaseDirectory;
          string filePath = path + "a.txt";
          FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
@@ -76,39 +74,39 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-      private static int Razmerrow()
-      {
-         int n;
-         do
-         {
-            Console.WriteLine("Введите количество строк массива А");
-            int.TryParse(Console.ReadLine(), out n);
-            //n = Convert.ToInt32(Console.ReadLine());
-            if (n <= 0 || n >= 20)
-            {
-               Console.WriteLine("Введено не верное значение");
-            }
-         } while (n <= 0 || n >= 20);
+      //private static int Razmerrow()
+      //{
+      //   int n;
+      //   do
+      //   {
+      //      Console.WriteLine("Введите количество строк массива А");
+      //      int.TryParse(Console.ReadLine(), out n);
+      //      //n = Convert.ToInt32(Console.ReadLine());
+      //      if (n <= 0 || n >= 20)
+      //      {
+      //         Console.WriteLine("Введено не верное значение");
+      //      }
+      //   } while (n <= 0 || n >= 20);
 
-         return n;
-      }
+      //   return n;
+      //}
 
-      private static int Razmercolumn()
-      {
-         int m;
-         do
-         {
-            Console.WriteLine("Введите количество столбцов массива А");
-            int.TryParse(Console.ReadLine(), out m);
-            //m = Convert.ToInt32(Console.ReadLine());
-            if (m <= 0 || m >= 20)
-            {
-               Console.WriteLine("Введено не верное значение");
-            }
-         } while (m <= 0 || m >= 20);
+      //private static int Razmercolumn()
+      //{
+      //   int m;
+      //   do
+      //   {
+      //      Console.WriteLine("Введите количество столбцов массива А");
+      //      int.TryParse(Console.ReadLine(), out m);
+      //      //m = Convert.ToInt32(Console.ReadLine());
+      //      if (m <= 0 || m >= 20)
+      //      {
+      //         Console.WriteLine("Введено не верное значение");
+      //      }
+      //   } while (m <= 0 || m >= 20);
 
-         return m;
-      }
+      //   return m;
+      //}
 
       private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
