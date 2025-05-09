@@ -74,8 +74,6 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-      
-
       private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
       {
          //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
