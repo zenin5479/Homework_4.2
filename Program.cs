@@ -33,7 +33,7 @@ namespace Homework_4._2
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
-         //VvodArray(a, n, m, fpA);
+         InputArray(a, n, m, fpA);
 
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
@@ -74,7 +74,7 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
-      private static void VvodArray(double[,] a, int n, int m, FileStream fpA)
+      private static void InputArray(double[,] a, int n, int m, FileStream fpA)
       {
          //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
          //1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
