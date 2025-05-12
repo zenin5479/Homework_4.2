@@ -21,8 +21,8 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         int n = TwoDimensionalArray.RazmerRow();
-         int m = TwoDimensionalArray.RazmerColumn();
+         int n = TwoDimensionalArray.SizeRow();
+         int m = TwoDimensionalArray.SizeColumn();
          bool fl = false;
          double[,] a = new double[n, m];
          string path = AppContext.BaseDirectory;

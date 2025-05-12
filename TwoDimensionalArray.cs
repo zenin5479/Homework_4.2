@@ -4,7 +4,7 @@ namespace Homework_4._2
 {
    internal class TwoDimensionalArray
    {
-      public static int RazmerRow()
+      public static int SizeRow()
       {
          int n;
          do
@@ -21,7 +21,7 @@ namespace Homework_4._2
          return n;
       }
 
-      public static int RazmerColumn()
+      public static int SizeColumn()
       {
          int m;
          do
