@@ -33,7 +33,7 @@ namespace Homework_4._2
             Console.WriteLine("Ошибка при открытии файла для чтения");
          }
 
-         InputArray(a, n, m, fpA);
+         //InputArray(a, n, m, fpA);
 
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
