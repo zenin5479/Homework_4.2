@@ -73,7 +73,7 @@ namespace Homework_4._2
          // Распечатываем все строки в списке
          foreach (string value in lines)
          {
-            Console.WriteLine(value);
+            //Console.WriteLine(value);
          }
 
          Console.ReadKey();
