@@ -39,7 +39,7 @@ namespace Homework_4._2
          }
 
          //InputArray(a, n, m, fpA);
-
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
          // Cвязываем StreamReader c файловыйм потоком
          if (fpA != null)
          {
@@ -54,6 +54,9 @@ namespace Homework_4._2
             // Закрытие потока
             stream.Close();
          }
+
+         Console.ResetColor();
+         Console.WriteLine();
 
          // Создаем новый список
          List<string> lines = new List<string>();
