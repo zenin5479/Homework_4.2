@@ -179,11 +179,6 @@ namespace Homework_4._2
 
          Console.ReadKey();
       }
-
-      private static void InputArray(double[,] a, int n, int m, FileStream fpA)
-      {
-        
-      }
    }
 
    //int main()
