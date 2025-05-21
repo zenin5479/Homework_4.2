@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Text;
 
 namespace Homework_4._2
 {
@@ -54,6 +56,63 @@ namespace Homework_4._2
          }
 
          return outputArray;
+      }
+
+      public static void FileWriteString(double[] arrayRealNumbers)
+      {
+         // Объединение одномерного массива максимальных значений строк double[]
+         // в одномерный массив строк string[] для записи в файл (в одну строку массива)
+         Console.WriteLine("Одномерный массив строк");
+         Console.BackgroundColor = ConsoleColor.DarkBlue;
+         StringBuilder stringModified = new StringBuilder();
+         int row = 0;
+         while (row < arrayRealNumbers.GetLength(0))
+         {
+            if (row != arrayRealNumbers.GetLength(0) - 1)
+            {
+               stringModified.Append(arrayRealNumbers[row] + " ");
+            }
+            else
+            {
+               stringModified.Append(arrayRealNumbers[row]);
+            }
+
+            row++;
+         }
+
+         Console.Write(stringModified);
+         Console.ResetColor();
+         Console.WriteLine();
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         string[] arrayString = { stringModified.ToString() };
+
+         File.WriteAllLines(filePath, arrayString);
+      }
+
+      public static void FileWriteArray(double[] arrayRealNumbers)
+      {
+         // Объединение одномерного массива максимальных значений строк double[]
+         // в одномерный массив строк string[] для записи в файл
+         Console.WriteLine("Одномерный массив строк");
+         StringBuilder stringModified = new StringBuilder();
+         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
+         int row = 0;
+         while (row < arrayRealNumbers.GetLength(0))
+         {
+            stringModified.Append(arrayRealNumbers[row]);
+            string subLine = stringModified.ToString();
+            arrayString[row] = subLine;
+            Console.WriteLine(subLine);
+            stringModified.Clear();
+            row++;
+         }
+
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "c.txt";
+         File.WriteAllLines(filePath, arrayString);
       }
    }
 }
