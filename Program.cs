@@ -29,7 +29,6 @@ namespace Homework_4._2
 
          int n = TwoDimensionalArray.SizeRow();
          int m = TwoDimensionalArray.SizeColumn();
-
          string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
