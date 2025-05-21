@@ -28,75 +28,15 @@ namespace Homework_4._2
 
          int n = TwoDimensionalArray.SizeRow();
          int m = TwoDimensionalArray.SizeColumn();
-         bool fl = false;
-         double[,] a = new double[n, m];
-         string path = AppContext.BaseDirectory;
-         string filePath = path + "a.txt";
-         FileStream fpA = File.Open(filePath, FileMode.Open, FileAccess.Read);
-         if (fpA == null)
-         {
-            Console.WriteLine("Ошибка при открытии файла для чтения");
-         }
-
-         //InputArray(a, n, m, fpA);
-         Console.BackgroundColor = ConsoleColor.DarkBlue;
-         // Cвязываем StreamReader c файловыйм потоком
-         if (fpA != null)
-         {
-            StreamReader stream = new StreamReader(fpA);
-            for (int i = 0; i < n; i++)
-            {
-               // Метод ReadLine() считает одну строку и перенесет указатель на начало следующей строки
-               string singleLine = stream.ReadLine();
-               Console.WriteLine(singleLine);
-            }
-            Console.WriteLine();
-            // Закрытие потока
-            stream.Close();
-         }
-
-         Console.ResetColor();
-         Console.WriteLine();
-
-         // Создаем новый список
-         List<string> lines = new List<string>();
-         // Используем ключевое слово using для удаления
-         using (StreamReader reader = new StreamReader(filePath))
-         {
-            // Используем шаблон while not null в цикле while
-            string line;
-            while ((line = reader.ReadLine()) != null)
-            {
-               // Вставляем сюда логику
-               // Переменная "line" - это строка в файле
-               // Добавляем её в список
-               lines.Add(line);
-            }
-         }
-         // Распечатываем все строки в списке
-         foreach (string value in lines)
-         {
-            //Console.WriteLine(value);
-         }
+         
+         
 
          Console.ReadKey();
       }
 
       private static void InputArray(double[,] a, int n, int m, FileStream fpA)
       {
-         //1 2 3 4 75 6 7 8 9 -10 1 2 3 4 5 6 87 8 9 -10
-         //1 2 3 4 5 6 7 8 9 10 1 2 3 4 5 6 7 8 9 10
-
-         for (int i = 0; i < n; i++)
-         {
-            for (int j = 0; j < m; j++)
-            {
-
-               //fscanf(f, "%lf", a[i, j]);
-               Console.Write("{0:f} ", a[i, j]);
-            }
-            Console.WriteLine();
-         }
+        
       }
    }
 
