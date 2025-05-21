@@ -187,10 +187,6 @@ namespace Homework_4._2
    //   vivod_vector(b, n, fp_finish);
    //}
 
-   //void vvod_vect(double**& x, int n, int m, FILE* f)
-   //{
-   //}
-
    //void find_max(double*& y, double** a, int n, int m, bool fl)
    //{
    //}
