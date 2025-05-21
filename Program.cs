@@ -186,8 +186,4 @@ namespace Homework_4._2
    //   find_max(b, a, n, m, fl);
    //   vivod_vector(b, n, fp_finish);
    //}
-
-   //void vivod_vector(double* x, int n, FILE* f)
-   //{
-   //}
 }
