@@ -85,7 +85,7 @@ namespace Homework_4._2
             Console.WriteLine();
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
-            Console.WriteLine("Двухмерный числовой массив"); //
+            Console.WriteLine("Двухмерный числовой массив");
             StringBuilder stringModified = new StringBuilder();
             arrayDouble = new double[allLines.Length, sizeArray.Length];
             char spaceCharacter = ' ';
@@ -172,7 +172,6 @@ namespace Homework_4._2
          }
 
          Console.WriteLine();
-
          TwoDimensionalArray.FileWriteArray(arrayMax);
          TwoDimensionalArray.FileWriteString(arrayMax);
 
