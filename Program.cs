@@ -137,16 +137,6 @@ namespace Homework_4._2
 
    //void vvod_vect(double**& x, int n, int m, FILE* f)
    //{
-   //   for (int i = 0; i < n; i++)
-   //   {
-   //      x[i] = new double[m];
-   //      for (int j = 0; j < m; j++)
-   //      {
-   //         fscanf(f, "%lf", &x[i][j]);
-   //         printf("%lf ", x[i][j]);
-   //      }
-   //      printf("%s", "\n");
-   //   }
    //}
 
    //void find_max(double*& y, double** a, int n, int m, bool fl)
@@ -155,6 +145,5 @@ namespace Homework_4._2
 
    //void vivod_vector(double* x, int n, FILE* f)
    //{
-   
    //}
 }
