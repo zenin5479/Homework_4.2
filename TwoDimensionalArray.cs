@@ -29,11 +29,11 @@ namespace Homework_4._2
             Console.WriteLine("Введите количество столбцов массива А");
             int.TryParse(Console.ReadLine(), out m);
             //m = Convert.ToInt32(Console.ReadLine());
-            if (m <= 0 || m >= 20)
+            if (m <= 0 || m > 20)
             {
                Console.WriteLine("Введено не верное значение");
             }
-         } while (m <= 0 || m >= 20);
+         } while (m <= 0 || m > 20);
 
          return m;
       }
