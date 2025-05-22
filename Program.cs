@@ -30,10 +30,10 @@ namespace Homework_4._2
          string[] stringArray = TwoDimensionalArray.VivodStringArray(arrayMax);
          Console.WriteLine();
          TwoDimensionalArray.FileWriteString(stringArray);
-         Console.WriteLine();
-         string[] arrayString = TwoDimensionalArray.VivodArrayString(arrayMax);
-         Console.WriteLine();
-         TwoDimensionalArray.FileWriteArray(arrayString);
+         //Console.WriteLine();
+         //string[] arrayString = TwoDimensionalArray.VivodArrayString(arrayMax);
+         //Console.WriteLine();
+         //TwoDimensionalArray.FileWriteArray(arrayString);
 
          Console.ReadKey();
       }
