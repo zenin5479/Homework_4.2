@@ -173,10 +173,18 @@ namespace Homework_4._2
          Console.WriteLine();
          TwoDimensionalArray.FileWriteArray(arrayMax);
          TwoDimensionalArray.FileWriteString(arrayMax);
+         FindMax();
 
          Console.ReadKey();
       }
+
+      private static void FindMax()
+      {
+         
+      }
    }
+
+
 
    //int main()
    //{
