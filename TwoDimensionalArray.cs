@@ -232,7 +232,6 @@ namespace Homework_4._2
 
          Console.WriteLine(stringModified);
          Console.ResetColor();
-         //Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "b.txt";
