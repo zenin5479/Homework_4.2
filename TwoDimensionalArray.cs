@@ -200,7 +200,7 @@ namespace Homework_4._2
          return arrayMax;
       }
 
-      private static void VivodArray(double[] inputArray)
+      public static void VivodArray(double[] inputArray)
       {
          Console.WriteLine("Массив максимальных значений строк");
          int indexMax = 0;
