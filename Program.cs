@@ -19,17 +19,19 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         string filePath = AppContext.BaseDirectory + "a.txt";
          int n = TwoDimensionalArray.SizeRow();
          int m = TwoDimensionalArray.SizeColumn();
          double[,] arrayDouble = TwoDimensionalArray.VvodArray(n, m);
+         Console.WriteLine();
          double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
+         Console.WriteLine();
+         // Не выводит никакой информации на консоль
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
          TwoDimensionalArray.VivodArray(arrayMax);
-         //Console.WriteLine();
-         //TwoDimensionalArray.FileWriteString(arrayMax);
          Console.WriteLine();
-         TwoDimensionalArray.FileWriteArray(arrayMax);
+         TwoDimensionalArray.FileWriteString(arrayMax);
+         //Console.WriteLine();
+         //TwoDimensionalArray.FileWriteArray(arrayMax);
 
          Console.ReadKey();
       }

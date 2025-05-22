@@ -206,6 +206,8 @@ namespace Homework_4._2
             Console.Write("{0} ", inputArray[indexMax]);
             indexMax++;
          }
+
+         Console.WriteLine();
       }
 
       public static void FileWriteString(double[] arrayRealNumbers)
