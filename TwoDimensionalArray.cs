@@ -40,26 +40,10 @@ namespace Homework_4._2
          return m;
       }
 
-      public static double[,] InputArray(double[,] inputArray, int n, int m)
+public static double[,] VvodArray(string path, int n, int m)
       {
-         double[,] outputArray = new double[n, m];
-         for (int i = 0; i < n; i++)
-         {
-            for (int j = 0; j < m; j++)
-            {
-               outputArray[i, j] = inputArray[i, j];
-               //Console.Write("{0:f2} ", outputArray[i, j]);
-               //Console.Write("{0:f} ", outputArray[i, j]);
-               Console.Write("{0} ", outputArray[i, j]);
-            }
-            Console.WriteLine();
-         }
-
-         return outputArray;
-      }
-
-      public static double[,] VvodArray(string path, int n, int m)
-      {
+         
+         
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
          // Чтение файла за одну операцию
@@ -166,10 +150,30 @@ namespace Homework_4._2
 
          Console.WriteLine();
          Console.WriteLine("Двумерный числовой массив для проведения поиска");
-         double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
+         double[,] arraySearch = InputArray(arrayDouble, n, m);
          Console.WriteLine();
          return arraySearch;
       }
+
+      public static double[,] InputArray(double[,] inputArray, int n, int m)
+      {
+         double[,] outputArray = new double[n, m];
+         for (int i = 0; i < n; i++)
+         {
+            for (int j = 0; j < m; j++)
+            {
+               outputArray[i, j] = inputArray[i, j];
+               //Console.Write("{0:f2} ", outputArray[i, j]);
+               //Console.Write("{0:f} ", outputArray[i, j]);
+               Console.Write("{0} ", outputArray[i, j]);
+            }
+            Console.WriteLine();
+         }
+
+         return outputArray;
+      }
+
+      
 
       public static double[] FindMax(double[,] inputArray)
       {
