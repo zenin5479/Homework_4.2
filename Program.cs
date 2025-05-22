@@ -34,7 +34,7 @@ namespace Homework_4._2
          VivodArray(arrayMax);
          Console.WriteLine();
          //TwoDimensionalArray.FileWriteArray(arrayMax);
-         //TwoDimensionalArray.FileWriteString(arrayMax);
+         TwoDimensionalArray.FileWriteString(arrayMax);
 
          Console.ReadKey();
       }
