@@ -161,7 +161,13 @@ namespace Homework_4._2
 
       private static void VivodArray(double[] inputArray)
       {
-         
+         Console.WriteLine("Массив максимальных значений строк");
+         int indexMax = 0;
+         while (indexMax < inputArray.Length)
+         {
+            Console.Write("{0} ", inputArray[indexMax]);
+            indexMax++;
+         }
       }
 
       private static double[] FindMax(double[,] inputArray)
