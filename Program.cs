@@ -38,7 +38,6 @@ namespace Homework_4._2
 
          Console.ReadKey();
       }
-      
    }
 
    //int main()
