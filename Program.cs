@@ -140,6 +140,9 @@ namespace Homework_4._2
 
          double[] arrayMax = FindMax(arraySearch);
 
+         VivodArray(arrayMax);
+
+
          Console.WriteLine("Массив максимальных значений строк");
          int indexMax = 0;
          while (indexMax < arrayMax.Length)
