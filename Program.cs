@@ -26,10 +26,10 @@ namespace Homework_4._2
          double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
          TwoDimensionalArray.VivodArray(arrayMax);
-         Console.WriteLine();
-         TwoDimensionalArray.FileWriteString(arrayMax);
          //Console.WriteLine();
-         //TwoDimensionalArray.FileWriteArray(arrayMax);
+         //TwoDimensionalArray.FileWriteString(arrayMax);
+         Console.WriteLine();
+         TwoDimensionalArray.FileWriteArray(arrayMax);
 
          Console.ReadKey();
       }
