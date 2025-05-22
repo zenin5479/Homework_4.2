@@ -234,6 +234,14 @@ namespace Homework_4._2
          return stringArray;
       }
 
+      public static void FileWriteString(string[] stringArray)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         File.WriteAllLines(filePath, stringArray);
+      }
+
       public static string[] VivodArrayString(double[] inputArray)
       {
          // Объединение одномерного массива максимальных значений строк double[]
@@ -253,14 +261,6 @@ namespace Homework_4._2
          }
 
          return arrayString;
-      }
-
-      public static void FileWriteString(string[] stringArray)
-      {
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         File.WriteAllLines(filePath, stringArray);
       }
 
       public static void FileWriteArray(string[] arrayString)
