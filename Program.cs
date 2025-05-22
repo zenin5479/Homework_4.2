@@ -33,8 +33,8 @@ namespace Homework_4._2
          double[] arrayMax = FindMax(arraySearch);
          VivodArray(arrayMax);
          Console.WriteLine();
-         TwoDimensionalArray.FileWriteArray(arrayMax);
-         TwoDimensionalArray.FileWriteString(arrayMax);
+         //TwoDimensionalArray.FileWriteArray(arrayMax);
+         //TwoDimensionalArray.FileWriteString(arrayMax);
 
          Console.ReadKey();
       }
