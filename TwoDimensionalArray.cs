@@ -40,12 +40,13 @@ namespace Homework_4._2
          return m;
       }
 
-public static double[,] VvodArray(string path, int n, int m)
+      public static double[,] VvodArray(int n, int m)
       {
+         string filePath = AppContext.BaseDirectory + "a.txt";
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
          // Чтение файла за одну операцию
-         string[] allLines = File.ReadAllLines(path);
+         string[] allLines = File.ReadAllLines(filePath);
          if (allLines == null)
          {
             Console.WriteLine("Ошибка при открытии файла для чтения");
@@ -94,7 +95,6 @@ public static double[,] VvodArray(string path, int n, int m)
             }
 
             Console.ResetColor();
-            Console.WriteLine();
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
@@ -146,16 +146,12 @@ public static double[,] VvodArray(string path, int n, int m)
             Console.ResetColor();
          }
 
-         Console.WriteLine();
-         Console.WriteLine("Двумерный числовой массив для проведения поиска");
-         double[,] arraySearch = InputArray(arrayDouble, n, m);
-         Console.WriteLine();
-         return arraySearch;
+         return arrayDouble;
       }
 
       public static double[,] InputArray(double[,] inputArray, int n, int m)
       {
-         
+         Console.WriteLine("Двумерный числовой массив для проведения поиска");
          double[,] outputArray = new double[n, m];
          for (int i = 0; i < n; i++)
          {
@@ -171,8 +167,6 @@ public static double[,] VvodArray(string path, int n, int m)
 
          return outputArray;
       }
-
-      
 
       public static double[] FindMax(double[,] inputArray)
       {
@@ -236,9 +230,9 @@ public static double[,] VvodArray(string path, int n, int m)
             row++;
          }
 
-         Console.Write(stringModified);
+         Console.WriteLine(stringModified);
          Console.ResetColor();
-         Console.WriteLine();
+         //Console.WriteLine();
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "b.txt";

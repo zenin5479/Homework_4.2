@@ -22,7 +22,8 @@ namespace Homework_4._2
          string filePath = AppContext.BaseDirectory + "a.txt";
          int n = TwoDimensionalArray.SizeRow();
          int m = TwoDimensionalArray.SizeColumn();
-         double[,] arraySearch = TwoDimensionalArray.VvodArray(filePath, n, m);
+         double[,] arrayDouble = TwoDimensionalArray.VvodArray(n, m);
+         double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
          TwoDimensionalArray.VivodArray(arrayMax);
          Console.WriteLine();
