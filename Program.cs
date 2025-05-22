@@ -38,37 +38,6 @@ namespace Homework_4._2
 
          Console.ReadKey();
       }
-
-      
-      private static double[] FindMax(double[,] inputArray)
-      {
-         // Поиск максимального элемента строки (без флагов bool)
-         double[] arrayMax = new double[inputArray.GetLength(0)];
-         int rowOut = 0;
-         int columnOut = 0;
-         while (rowOut < inputArray.GetLength(0))
-         {
-            // Cчитаем, что максимум - это первый элемент строки
-            double maxOut = inputArray[rowOut, 0];
-            while (columnOut < inputArray.GetLength(1))
-            {
-               if (maxOut < inputArray[rowOut, columnOut])
-               {
-                  maxOut = inputArray[rowOut, columnOut];
-               }
-
-               columnOut++;
-            }
-
-            arrayMax[rowOut] = maxOut;
-            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
-            columnOut = 0;
-            rowOut++;
-         }
-
-         return arrayMax;
-      }
-
       
    }
 
