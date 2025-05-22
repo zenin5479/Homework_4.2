@@ -138,29 +138,7 @@ namespace Homework_4._2
          double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
-         // Поиск максимального элемента строки (без флагов bool)
-         double[] arrayMax = new double[arraySearch.GetLength(0)];
-         int rowOut = 0;
-         int columnOut = 0;
-         while (rowOut < arraySearch.GetLength(0))
-         {
-            // Cчитаем, что максимум - это первый элемент строки
-            double maxOut = arraySearch[rowOut, 0];
-            while (columnOut < arraySearch.GetLength(1))
-            {
-               if (maxOut < arraySearch[rowOut, columnOut])
-               {
-                  maxOut = arraySearch[rowOut, columnOut];
-               }
-
-               columnOut++;
-            }
-
-            arrayMax[rowOut] = maxOut;
-            //Console.WriteLine("Максимум в строке {0} равен: {1}", rowOut, maxOut);
-            columnOut = 0;
-            rowOut++;
-         }
+         double[] arrayMax = FindMax(arraySearch);
 
          Console.WriteLine("Массив максимальных значений строк");
          int indexMax = 0;
@@ -173,12 +151,12 @@ namespace Homework_4._2
          Console.WriteLine();
          TwoDimensionalArray.FileWriteArray(arrayMax);
          TwoDimensionalArray.FileWriteString(arrayMax);
-         FindMax(arraySearch);
+
 
          Console.ReadKey();
       }
 
-      private static void FindMax(double[,] inputArray)
+      private static double[] FindMax(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
          double[] arrayMax = new double[inputArray.GetLength(0)];
@@ -203,6 +181,8 @@ namespace Homework_4._2
             columnOut = 0;
             rowOut++;
          }
+
+         return arrayMax;
       }
    }
 
