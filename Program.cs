@@ -31,7 +31,7 @@ namespace Homework_4._2
          string filePath = AppContext.BaseDirectory + "a.txt";
          double[,] arraySearch = TwoDimensionalArray.VvodArray(filePath, n, m);
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
-         VivodArray(arrayMax);
+         TwoDimensionalArray.VivodArray(arrayMax);
          Console.WriteLine();
          //TwoDimensionalArray.FileWriteArray(arrayMax);
          TwoDimensionalArray.FileWriteString(arrayMax);
@@ -69,16 +69,7 @@ namespace Homework_4._2
          return arrayMax;
       }
 
-      private static void VivodArray(double[] inputArray)
-      {
-         Console.WriteLine("Массив максимальных значений строк");
-         int indexMax = 0;
-         while (indexMax < inputArray.Length)
-         {
-            Console.Write("{0} ", inputArray[indexMax]);
-            indexMax++;
-         }
-      }
+      
    }
 
    //int main()
