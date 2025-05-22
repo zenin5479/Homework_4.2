@@ -25,13 +25,15 @@ namespace Homework_4._2
          Console.WriteLine();
          double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
          Console.WriteLine();
-         // Не выводит никакой информации на консоль
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
-         string[] arrayString= TwoDimensionalArray.VivodStringArray(arrayMax);
          Console.WriteLine();
-         TwoDimensionalArray.FileWriteString(arrayString);
-         //Console.WriteLine();
-         //TwoDimensionalArray.FileWriteArray(arrayMax);
+         string[] stringArray = TwoDimensionalArray.VivodStringArray(arrayMax);
+         Console.WriteLine();
+         TwoDimensionalArray.FileWriteString(stringArray);
+         Console.WriteLine();
+         string[] arrayString = TwoDimensionalArray.VivodArrayString(arrayMax);
+         Console.WriteLine();
+         TwoDimensionalArray.FileWriteArray(arrayString);
 
          Console.ReadKey();
       }

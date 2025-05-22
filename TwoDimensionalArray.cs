@@ -230,27 +230,21 @@ namespace Homework_4._2
 
          Console.WriteLine(stringModified);
          Console.ResetColor();
-         string[] arrayString = { stringModified.ToString() };
-         return arrayString;
+         string[] stringArray = { stringModified.ToString() };
+         return stringArray;
       }
 
-      public static void FileWriteString(string[] arrayString)
-      {
-         string filePath = AppContext.BaseDirectory + "b.txt";
-         File.WriteAllLines(filePath, arrayString);
-      }
-
-      public static void FileWriteArray(double[] arrayRealNumbers)
+      public static string[] VivodArrayString(double[] inputArray)
       {
          // Объединение одномерного массива максимальных значений строк double[]
          // в одномерный массив строк string[] для записи в файл
          Console.WriteLine("Одномерный массив строк");
          StringBuilder stringModified = new StringBuilder();
-         string[] arrayString = new string[arrayRealNumbers.GetLength(0)];
+         string[] arrayString = new string[inputArray.GetLength(0)];
          int row = 0;
-         while (row < arrayRealNumbers.GetLength(0))
+         while (row < inputArray.GetLength(0))
          {
-            stringModified.Append(arrayRealNumbers[row]);
+            stringModified.Append(inputArray[row]);
             string subLine = stringModified.ToString();
             arrayString[row] = subLine;
             Console.WriteLine(subLine);
@@ -258,6 +252,19 @@ namespace Homework_4._2
             row++;
          }
 
+         return arrayString;
+      }
+
+      public static void FileWriteString(string[] stringArray)
+      {
+         // Запись массива строк в файл
+         Console.WriteLine("Запись массива строк в файл");
+         string filePath = AppContext.BaseDirectory + "b.txt";
+         File.WriteAllLines(filePath, stringArray);
+      }
+
+      public static void FileWriteArray(string[] arrayString)
+      {
          // Запись массива строк в файл
          Console.WriteLine("Запись массива строк в файл");
          string filePath = AppContext.BaseDirectory + "c.txt";
