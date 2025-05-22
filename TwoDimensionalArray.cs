@@ -206,12 +206,7 @@ namespace Homework_4._2
          return arrayMax;
       }
 
-      public static void VivodArray(double[] inputArray)
-      {
-
-      }
-
-      public static void FileWriteString(double[] arrayRealNumbers)
+      public static string[] VivodStringArray(double[] inputArray)
       {
          // Объединение одномерного массива максимальных значений строк double[]
          // в одномерный массив строк string[] для записи в файл (в одну строку массива)
@@ -219,15 +214,15 @@ namespace Homework_4._2
          Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
          int row = 0;
-         while (row < arrayRealNumbers.GetLength(0))
+         while (row < inputArray.GetLength(0))
          {
-            if (row != arrayRealNumbers.GetLength(0) - 1)
+            if (row != inputArray.GetLength(0) - 1)
             {
-               stringModified.Append(arrayRealNumbers[row] + " ");
+               stringModified.Append(inputArray[row] + " ");
             }
             else
             {
-               stringModified.Append(arrayRealNumbers[row]);
+               stringModified.Append(inputArray[row]);
             }
 
             row++;
@@ -235,11 +230,13 @@ namespace Homework_4._2
 
          Console.WriteLine(stringModified);
          Console.ResetColor();
-         // Запись массива строк в файл
-         Console.WriteLine("Запись массива строк в файл");
-         string filePath = AppContext.BaseDirectory + "b.txt";
          string[] arrayString = { stringModified.ToString() };
+         return arrayString;
+      }
 
+      public static void FileWriteString(string[] arrayString)
+      {
+         string filePath = AppContext.BaseDirectory + "b.txt";
          File.WriteAllLines(filePath, arrayString);
       }
 
