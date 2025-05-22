@@ -159,6 +159,11 @@ namespace Homework_4._2
          Console.ReadKey();
       }
 
+      private static void VivodArray(double[] inputArray)
+      {
+         
+      }
+
       private static double[] FindMax(double[,] inputArray)
       {
          // Поиск максимального элемента строки (без флагов bool)
