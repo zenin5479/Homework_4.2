@@ -42,8 +42,6 @@ namespace Homework_4._2
 
 public static double[,] VvodArray(string path, int n, int m)
       {
-         
-         
          // Двумерный массив вещественных чисел
          double[,] arrayDouble = { };
          // Чтение файла за одну операцию
@@ -157,6 +155,7 @@ public static double[,] VvodArray(string path, int n, int m)
 
       public static double[,] InputArray(double[,] inputArray, int n, int m)
       {
+         
          double[,] outputArray = new double[n, m];
          for (int i = 0; i < n; i++)
          {
