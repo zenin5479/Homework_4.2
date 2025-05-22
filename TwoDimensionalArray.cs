@@ -194,20 +194,21 @@ namespace Homework_4._2
             rowOut++;
          }
 
+         Console.WriteLine("Массив максимальных значений строк");
+         int indexMax = 0;
+         while (indexMax < arrayMax.Length)
+         {
+            Console.Write("{0} ", arrayMax[indexMax]);
+            indexMax++;
+         }
+
+         Console.WriteLine();
          return arrayMax;
       }
 
       public static void VivodArray(double[] inputArray)
       {
-         Console.WriteLine("Массив максимальных значений строк");
-         int indexMax = 0;
-         while (indexMax < inputArray.Length)
-         {
-            Console.Write("{0} ", inputArray[indexMax]);
-            indexMax++;
-         }
 
-         Console.WriteLine();
       }
 
       public static void FileWriteString(double[] arrayRealNumbers)
