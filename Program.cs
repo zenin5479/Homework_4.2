@@ -199,6 +199,6 @@ namespace Homework_4._2
    //   int m = razmercolumnvect(); +
    //   vvod_vect(a, n, m, fp_a); +
    //   find_max(b, a, n, m, fl); +
-   //   vivod_vector(b, n, fp_finish); +
+   //   vivod_vector(b, n, fp_finish); + -
    //}
 }
