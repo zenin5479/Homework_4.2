@@ -139,22 +139,10 @@ namespace Homework_4._2
          Console.WriteLine();
 
          double[] arrayMax = FindMax(arraySearch);
-
          VivodArray(arrayMax);
-
-
-         Console.WriteLine("Массив максимальных значений строк");
-         int indexMax = 0;
-         while (indexMax < arrayMax.Length)
-         {
-            Console.Write("{0} ", arrayMax[indexMax]);
-            indexMax++;
-         }
-
          Console.WriteLine();
          TwoDimensionalArray.FileWriteArray(arrayMax);
          TwoDimensionalArray.FileWriteString(arrayMax);
-
 
          Console.ReadKey();
       }
