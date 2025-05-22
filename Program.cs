@@ -138,6 +138,8 @@ namespace Homework_4._2
          double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
          Console.WriteLine();
 
+         double[,] arraySearch = VvodArray(filePath, n, m);
+
          double[] arrayMax = FindMax(arraySearch);
          VivodArray(arrayMax);
          Console.WriteLine();
@@ -145,6 +147,118 @@ namespace Homework_4._2
          TwoDimensionalArray.FileWriteString(arrayMax);
 
          Console.ReadKey();
+      }
+
+      private static double[,] VvodArray(string path, int n, int m)
+      {
+         // Двумерный массив вещественных чисел
+         double[,] arrayDouble = { };
+         // Чтение файла за одну операцию
+         string[] allLines = File.ReadAllLines(path);
+         if (allLines == null)
+         {
+            Console.WriteLine("Ошибка при открытии файла для чтения");
+         }
+         else
+         {
+            Console.WriteLine("Исходный массив строк");
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            int indexLines = 0;
+            while (indexLines < allLines.Length)
+            {
+               allLines[indexLines] = allLines[indexLines];
+               Console.WriteLine(allLines[indexLines]);
+               indexLines++;
+            }
+
+            // Разделение строки на подстроки по пробелу для определения количества столбцов в строке
+            int[] sizeArray = new int[allLines.Length];
+            char symbolSpace = ' ';
+            int countRow = 0;
+            int countSymbol = 0;
+            int countСolumn = 0;
+            while (countRow < allLines.Length)
+            {
+               string line = allLines[countRow];
+               while (countSymbol < line.Length)
+               {
+                  if (symbolSpace == line[countSymbol])
+                  {
+                     countСolumn++;
+                  }
+
+                  if (countSymbol == line.Length - 1)
+                  {
+                     countСolumn++;
+                  }
+
+                  countSymbol++;
+               }
+
+               sizeArray[countRow] = countСolumn;
+               //Console.WriteLine("В строке {0} количество столбцов {1}", countRow, countСolumn);
+               countСolumn = 0;
+               countRow++;
+               countSymbol = 0;
+            }
+
+            Console.ResetColor();
+            Console.WriteLine();
+
+            // Разделение строки на подстроки по пробелу и конвертация подстрок в double
+            Console.WriteLine("Двухмерный числовой массив");
+            StringBuilder stringModified = new StringBuilder();
+            arrayDouble = new double[allLines.Length, sizeArray.Length];
+            char spaceCharacter = ' ';
+            int row = 0;
+            int column = 0;
+            int countCharacter = 0;
+            while (row < arrayDouble.GetLength(0))
+            {
+               string line = allLines[row];
+               while (column < sizeArray[row])
+               {
+                  while (countCharacter < line.Length)
+                  {
+                     if (spaceCharacter != line[countCharacter])
+                     {
+                        stringModified.Append(line[countCharacter]);
+                     }
+                     else
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDouble[row, column] + " ");
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     if (countCharacter == line.Length - 1)
+                     {
+                        string subLine = stringModified.ToString();
+                        arrayDouble[row, column] = Convert.ToDouble(subLine);
+                        Console.Write(arrayDouble[row, column]);
+                        stringModified.Clear();
+                        column++;
+                     }
+
+                     countCharacter++;
+                  }
+
+                  countCharacter = 0;
+               }
+
+               Console.WriteLine();
+               column = 0;
+               row++;
+            }
+            Console.ResetColor();
+         }
+
+         Console.WriteLine();
+         Console.WriteLine("Двумерный числовой массив для проведения поиска");
+         double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
+         Console.WriteLine();
       }
 
       private static double[] FindMax(double[,] inputArray)
