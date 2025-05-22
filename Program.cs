@@ -26,16 +26,15 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
+         string filePath = AppContext.BaseDirectory + "a.txt";
          int n = TwoDimensionalArray.SizeRow();
          int m = TwoDimensionalArray.SizeColumn();
-         string filePath = AppContext.BaseDirectory + "a.txt";
-
          double[,] arraySearch = TwoDimensionalArray.VvodArray(filePath, n, m);
          double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
          TwoDimensionalArray.VivodArray(arrayMax);
          Console.WriteLine();
-
          TwoDimensionalArray.FileWriteString(arrayMax);
+         Console.WriteLine();
          TwoDimensionalArray.FileWriteArray(arrayMax);
 
          Console.ReadKey();
