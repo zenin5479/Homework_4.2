@@ -27,8 +27,8 @@ namespace Homework_4._2
          TwoDimensionalArray.VivodArray(arrayMax);
          Console.WriteLine();
          TwoDimensionalArray.FileWriteString(arrayMax);
-         Console.WriteLine();
-         TwoDimensionalArray.FileWriteArray(arrayMax);
+         //Console.WriteLine();
+         //TwoDimensionalArray.FileWriteArray(arrayMax);
 
          Console.ReadKey();
       }
