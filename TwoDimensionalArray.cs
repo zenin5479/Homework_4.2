@@ -54,7 +54,6 @@ namespace Homework_4._2
          else
          {
             Console.WriteLine("Исходный массив строк");
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
             int indexLines = 0;
             while (indexLines < allLines.Length)
             {
@@ -93,8 +92,6 @@ namespace Homework_4._2
                countRow++;
                countSymbol = 0;
             }
-
-            Console.ResetColor();
 
             // Разделение строки на подстроки по пробелу и конвертация подстрок в double
             Console.WriteLine("Двухмерный числовой массив");
@@ -211,7 +208,6 @@ namespace Homework_4._2
          // Объединение одномерного массива максимальных значений строк double[]
          // в одномерный массив строк string[] для записи в файл (в одну строку массива)
          Console.WriteLine("Одномерный массив строк");
-         Console.BackgroundColor = ConsoleColor.DarkBlue;
          StringBuilder stringModified = new StringBuilder();
          int row = 0;
          while (row < inputArray.GetLength(0))
@@ -229,7 +225,6 @@ namespace Homework_4._2
          }
 
          Console.WriteLine(stringModified);
-         Console.ResetColor();
          string[] stringArray = { stringModified.ToString() };
          return stringArray;
       }
