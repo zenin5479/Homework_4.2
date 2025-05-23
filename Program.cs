@@ -1,4 +1,5 @@
 ﻿using System;
+using LibraryFor2DArray;
 
 // Составить подпрограмму для решения первой подзадачи и использовать её при решении второй подзадачи
 // Во многих задачах возможны два варианта:
@@ -19,21 +20,21 @@ namespace Homework_4._2
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
 
-         int n = TwoDimensionalArray.SizeRow();
-         int m = TwoDimensionalArray.SizeColumn();
-         double[,] arrayDouble = TwoDimensionalArray.VvodArray(n, m);
+         int n = VariousMethods.SizeRow();
+         int m = VariousMethods.SizeColumn();
+         double[,] arrayDouble = VariousMethods.VvodArray(n, m);
          Console.WriteLine();
-         double[,] arraySearch = TwoDimensionalArray.InputArray(arrayDouble, n, m);
+         double[,] arraySearch = VariousMethods.InputArray(arrayDouble, n, m);
          Console.WriteLine();
-         double[] arrayMax = TwoDimensionalArray.FindMax(arraySearch);
+         double[] arrayMax = VariousMethods.FindMax(arraySearch);
          Console.WriteLine();
-         string[] stringArray = TwoDimensionalArray.VivodStringArray(arrayMax);
+         string[] stringArray = VariousMethods.VivodStringArray(arrayMax);
          Console.WriteLine();
-         TwoDimensionalArray.FileWriteString(stringArray);
+         VariousMethods.FileWriteString(stringArray);
          //Console.WriteLine();
-         //string[] arrayString = TwoDimensionalArray.VivodArrayString(arrayMax);
+         string[] arrayString = VariousMethods.VivodArrayString(arrayMax);
          //Console.WriteLine();
-         //TwoDimensionalArray.FileWriteArray(arrayString);
+         VariousMethods.FileWriteArray(arrayString);
 
          Console.ReadKey();
       }

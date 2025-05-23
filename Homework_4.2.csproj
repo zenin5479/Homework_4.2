@@ -6,4 +6,10 @@
     <RootNamespace>Homework_4._2</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="LibraryFor2DArray">
+      <HintPath>bin\Debug\netcoreapp3.1\LibraryFor2DArray.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
