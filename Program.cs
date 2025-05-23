@@ -15,7 +15,7 @@ namespace Homework_4._2
 {
    internal class Program
    {
-      static void Main(string[] args)
+      static void Main()
       {
          // Переводит (,) в (.)
          //System.Threading.Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
