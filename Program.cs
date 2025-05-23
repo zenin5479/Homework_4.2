@@ -31,10 +31,10 @@ namespace Homework_4._2
          string[] stringArray = VariousMethods.VivodStringArray(arrayMax);
          Console.WriteLine();
          VariousMethods.FileWriteString(stringArray);
-         //Console.WriteLine();
-         //string[] arrayString = VariousMethods.VivodArrayString(arrayMax);
-         //Console.WriteLine();
-         //VariousMethods.FileWriteArray(arrayString);
+         Console.WriteLine();
+         string[] arrayString = VariousMethods.VivodArrayString(arrayMax);
+         Console.WriteLine();
+         VariousMethods.FileWriteArray(arrayString);
 
          Console.ReadKey();
       }
