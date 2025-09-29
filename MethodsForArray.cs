@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Homework_4._2
 {
-   internal class TwoDimensionalArray
+   internal class MethodsForArray
    {
       public static int SizeRow()
       {
